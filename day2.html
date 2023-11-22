@@ -6,8 +6,9 @@
 		<META name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="js/main.js"></script>
 	</HEAD>
-	<BODY>
+	<BODY onload="displayOnDate()">
 		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 			<div class="container-fluid">
 			  <a class="navbar-brand" href="index.html"><img src="assets/images/Jadavpur_University_Logo.png" height="50px"></a>
@@ -30,17 +31,59 @@
 			</div>
 		  </nav>
           <div class="container-fluid mt-3">
-            <p class="display-1 text-center">Basics</p>
-            <p class="h2 text-lg-end">Date: 08-11-2023 (A2) , 09-11-2023 (A3)</p>
-            <p class="text-primary fw-bold">1. Write a C program to display the following message on the screen – “Hello World!”</p>
-            <p class="text-primary fw-bold">2. Write a C program to display your name and roll number using tab (\t) and newline (\n) characters in the following format-</p>
-            <p>Name: &emsp; &emsp; &emsp; &emsp;Arijit De<br>Roll Number: &emsp; &nbsp;&nbsp;2010701864</p>
-            <p class="text-primary fw-bold">3. Write a C program to calculate the area and perimeter of a rectangle and display the length, breadth, area and perimeter values. Use the values 9 and 6 for length and breadth, respectively.
-            </p>
-            <p class="text-primary fw-bold">4. The radius of a circle is input through the keyboard. Write a program to calculate the area and circumference of the circle.</p>
-            <p class="text-primary fw-bold">5. Write a C program that reads two values from the keyboard, swaps their values and print out the result.</p>
-            <p class="text-primary fw-bold">6. Temperature of a city in Fahrenheit degrees is input through the keyboard. Write a program to convert this temperature into Centigrade degrees.		[Optional]
-            </p>
-            <p class="text-primary fw-bold">7. Write a C program which accepts basic salary as input and prints the gross salary, which is the sum of the basic, dearness allowance (60% of basic salary), and house rent allowance (15% of basic salary).				[Optional]</p>
+            <p class="display-1 text-center">Conditional Statements and loops</p>
+            <p class="h2 text-lg-end">Date: 22-11-2023 (A2) , 30-11-2023 (A3)</p>
+            <p class="text-primary fw-bold">1. Any year is input through the keyboard. Write a program to determine whether the year is a leap year or not. [Hint: Use the % (modulus) operator]. Show two cases - one where entered year is leap year, another where entered year is not a leap year.</p>
+            <p class="text-primary fw-bold">2. Write a C program to provide calculator functionality using two operands given by the user. The valid operators are +, -, *, / and %. The program should keep on asking the user for a pair of numbers until the user enters 0 & 0.</p>
+			<p><u>Sample Output:</u><br>
+				Enter two numbers: 10 20<br>
+				Enter operator: *<br>
+				Result: 200<br>
+				Enter two numbers: 50 30<br>
+				Enter operator: /<br>
+				Result: 1.66666666667<br>
+				Enter two numbers: 0 0<br>
+				Quitting Program<br>
+				</p>
+            <p class="text-primary fw-bold">3. Write a C program to check whether a triangle is Equilateral, Isosceles or Scalene.</p>
+            <p class="text-primary fw-bold">4. If the marks obtained by a student in five different subjects are input through the keyboard, find the total and percentage. The maximum marks in each subject is 100. Check for invalid, wrong inputs and give appropriate messages.</p>
+			<p><u>Sample Output:</u><br><pre>Case 1:
+Enter marks in Subject 1: 60
+Enter marks in Subject 2: 75
+Enter marks in Subject 3: 80
+Enter marks in Subject 4: 80
+Enter marks in Subject 5: 70
+Total: 365/500
+Percentage: 73%
+
+Case 2:
+Enter marks in Subject 1: 60
+Enter marks in Subject 2: 75
+Enter marks in Subject 3: -80
+Marks cannot be negative. Please try again.
+
+Case 3:
+Enter marks in Subject 1: 60
+Enter marks in Subject 2: 75
+Enter marks in Subject 3: 800
+Marks cannot be more than maximum marks (100). Please try again.</pre>
+				</p>
+			<p class="text-primary fw-bold">5. In a town, the percentage of men is ‘m’. The percentage of total literacy is’L’. If total percentage of literate men is ’lm’ of the total population, write a program to find the total number of illiterate men and women if the population of the town is P.	[Optional]
+			</p>
+			<p><u>Sample Output:</u><br>
+				Enter percentage of men: 35<br>
+				Enter percentage of total literacy: 48<br>
+				Enter percentage of literate men: 35<br>
+				Enter total population: 80000<br>
+				Total number of illiterate men: 13600<br>
+				Total number of illiterate women: 28000<br>
+				</p>
+            <p class="text-primary fw-bold">6. Write a C program to input electricity unit charges and calculate total electricity bill according to the given condition:<br>
+				For first 50 units Rs. 0.50/unit<br>
+				For next 100 units Rs. 0.75/unit<br>
+				For next 100 units Rs. 1.20/unit<br>
+				For unit above 250 Rs. 1.50/unit><br>
+				An additional surcharge of 20% is added to the bill<br>
+				</p>
           </div>
     </BODY>
