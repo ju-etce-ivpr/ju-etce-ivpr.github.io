@@ -8,7 +8,7 @@
   		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 		<script src="js/main.js"></script>
 	</HEAD>
-	<BODY>
+	<BODY onload="displayInputFile()">
 		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 			<div class="container-fluid">
 			  <a class="navbar-brand" href="index.html"><img src="assets/images/Jadavpur_University_Logo.png" height="50px"></a>
@@ -33,19 +33,17 @@
           <div class="container-fluid mt-3">
             <p class="display-1 text-center">Basics</p>
             <p class="h2 text-lg-end">Date: 08-11-2023 (A2) , 09-11-2023 (A3)</p>
-            <p class="text-primary fw-bold">1. Write a C program to display the following message on the screen – “Hello World!”</p>
-			<input type="file" id="fileInput">
-			<br>
-			<button onclick="readFile()">Find output</button>
-			<div id="fileContents"></div>
-			<p class="text-primary fw-bold">2. Write a C program to display your name and roll number using tab (\t) and newline (\n) characters in the following format-</p>
-            <p>Name: &emsp; &emsp; &emsp; &emsp;Arijit De<br>Roll Number: &emsp; &nbsp;&nbsp;2010701864</p>
-            <p class="text-primary fw-bold">3. Write a C program to calculate the area and perimeter of a rectangle and display the length, breadth, area and perimeter values. Use the values 9 and 6 for length and breadth, respectively.
-            </p>
-            <p class="text-primary fw-bold">4. The radius of a circle is input through the keyboard. Write a program to calculate the area and circumference of the circle.</p>
-            <p class="text-primary fw-bold">5. Write a C program that reads two values from the keyboard, swaps their values and print out the result.</p>
-            <p class="text-primary fw-bold">6. Temperature of a city in Fahrenheit degrees is input through the keyboard. Write a program to convert this temperature into Centigrade degrees.		[Optional]
-            </p>
-            <p class="text-primary fw-bold">7. Write a C program which accepts basic salary as input and prints the gross salary, which is the sum of the basic, dearness allowance (60% of basic salary), and house rent allowance (15% of basic salary).				[Optional]</p>
-          </div>
+			<div id="content">
+				<p class="text-primary fw-bold">1. Write a C program to display the following message on the screen – “Hello World!”</p>
+				<p class="text-primary fw-bold">2. Write a C program to display your name and roll number using tab (\t) and newline (\n) characters in the following format-</p>
+				<p>Name: &emsp; &emsp; &emsp; &emsp;Arijit De<br>Roll Number: &emsp; &nbsp;&nbsp;2010701864</p>
+				<p class="text-primary fw-bold">3. Write a C program to calculate the area and perimeter of a rectangle and display the length, breadth, area and perimeter values. Use the values 9 and 6 for length and breadth, respectively.
+				</p>
+				<p class="text-primary fw-bold">4. The radius of a circle is input through the keyboard. Write a program to calculate the area and circumference of the circle.</p>
+				<p class="text-primary fw-bold">5. Write a C program that reads two values from the keyboard, swaps their values and print out the result.</p>
+				<p class="text-primary fw-bold">6. Temperature of a city in Fahrenheit degrees is input through the keyboard. Write a program to convert this temperature into Centigrade degrees.		[Optional]
+				</p>
+				<p class="text-primary fw-bold">7. Write a C program which accepts basic salary as input and prints the gross salary, which is the sum of the basic, dearness allowance (60% of basic salary), and house rent allowance (15% of basic salary).				[Optional]</p>
+		    </div>
+		</div>
     </BODY>
