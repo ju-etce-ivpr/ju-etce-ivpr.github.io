@@ -1,4 +1,4 @@
-var dates = ["2023-11-09","2023-11-16","2023-11-23", "2023-11-30"]
+var dates = ["2023-11-09","2023-11-16", "2023-11-30"]
 
 function isFutureDate(dateString){
     var currentDate = new Date();
@@ -22,11 +22,47 @@ function displayOnDate(){
             }
         }
     }
+  displayInputFile();
 }
 
-function readFile() {
-  const file = document.getElementById('fileInput').files[0];
-  document.getElementById('fileContents').innerHTML= "";
+function displayInputFile(){
+
+  const paragraphs = document.querySelectorAll('#content p');
+  var i =1;
+  paragraphs.forEach(para => {
+    // Adding file input
+    const fileInput = document.createElement('input');
+    fileInput.setAttribute('type', 'file');
+    fileInput.setAttribute('id', 'fileInput'+i);
+
+    // Adding button
+    const button = document.createElement('button');
+    button.textContent = 'Find output';
+    button.onclick = function() {
+      readFile(fileInput.getAttribute('id'),div.getAttribute('id'));
+    };  
+    
+    // Adding div
+    const div = document.createElement('div');
+    div.setAttribute('id','fileContents'+i);
+
+    // Adding a non-breaking space
+    const space = document.createElement('span');
+    space.innerHTML = '&nbsp;'; 
+
+    // Insert the button after the paragraph
+    para.insertAdjacentElement('afterend', fileInput);
+    para.insertAdjacentElement('afterend', space);
+    para.insertAdjacentElement('afterend', button);
+    para.insertAdjacentElement('afterend', div);
+    i++;
+  });
+
+}
+
+function readFile(fileInput,divContent) {
+  const file = document.getElementById(fileInput).files[0];
+  document.getElementById(divContent).innerHTML= "";
 
   if (file) {
     if (file.name.endsWith('.c')){
@@ -35,16 +71,16 @@ function readFile() {
     
     reader.onload = function(event) {
       // document.getElementById('fileContents').innerHTML= event.target.result;
-      compiler(event.target.result);
+      compiler(event.target.result,divContent);
     };
 
     reader.onerror = function(event) {
-      document.getElementById('fileContents').innerHTML= "error reading file";
+      document.getElementById(divContent).innerHTML= "error reading file";
     };
     }
     else{
       alert('File must be of .c extension');
-      document.getElementById('fileInput').value = '';
+      document.getElementById(fileInput).value = '';
     }
       
   } else {
@@ -52,7 +88,7 @@ function readFile() {
   }
 }
 
-function compiler(c_code){
+function compiler(c_code,divContent){
 
   const data = JSON.stringify({
       language: 'c',
@@ -68,7 +104,7 @@ function compiler(c_code){
   
   xhr.addEventListener('readystatechange', function () {
       if (this.readyState === this.DONE) {
-          document.getElementById('fileContents').innerHTML= this.responseText;
+          document.getElementById(divContent).innerHTML= this.responseText;
           console.log(this.responseText);
       }
   });
