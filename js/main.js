@@ -1,4 +1,4 @@
-var dates = ["2023-11-09","2023-11-16", "2023-11-30"]
+var dates = ["2023-11-09","2023-11-16", "2023-11-29"]
 
 function isFutureDate(dateString){
     var currentDate = new Date();
@@ -104,8 +104,8 @@ function compiler(c_code,divContent){
   
   xhr.addEventListener('readystatechange', function () {
       if (this.readyState === this.DONE) {
-          document.getElementById(divContent).innerHTML= this.responseText;
-          console.log(this.responseText);
+          document.getElementById(divContent).innerHTML= JSON.parse(this.responseText)["output"];
+          // console.log(JSON.parse(this.responseText)["output"]);
       }
   });
   

@@ -31,19 +31,116 @@
 			</div>
 		  </nav>
           <div class="container-fluid mt-3">
-            <p class="display-1 text-center">Basics</p>
-            <p class="h2 text-lg-end">Date: 08-11-2023 (A2) , 09-11-2023 (A3)</p>
-            <div id="content">
-				<p class="text-primary fw-bold">1. Write a C program to display the following message on the screen – “Hello World!”</p>
-				<p class="text-primary fw-bold">2. Write a C program to display your name and roll number using tab (\t) and newline (\n) characters in the following format-</p>
-				<p>Name: &emsp; &emsp; &emsp; &emsp;Arijit De<br>Roll Number: &emsp; &nbsp;&nbsp;2010701864</p>
-				<p class="text-primary fw-bold">3. Write a C program to calculate the area and perimeter of a rectangle and display the length, breadth, area and perimeter values. Use the values 9 and 6 for length and breadth, respectively.
-				</p>
-				<p class="text-primary fw-bold">4. The radius of a circle is input through the keyboard. Write a program to calculate the area and circumference of the circle.</p>
-				<p class="text-primary fw-bold">5. Write a C program that reads two values from the keyboard, swaps their values and print out the result.</p>
-				<p class="text-primary fw-bold">6. Temperature of a city in Fahrenheit degrees is input through the keyboard. Write a program to convert this temperature into Centigrade degrees.		[Optional]
-				</p>
-				<p class="text-primary fw-bold">7. Write a C program which accepts basic salary as input and prints the gross salary, which is the sum of the basic, dearness allowance (60% of basic salary), and house rent allowance (15% of basic salary).				[Optional]</p>
-		    </div>
+            <p class="display-1 text-center">Loops</p>
+            <p class="h2 text-lg-end">Date: 29-11-2023 (A2) , 30-11-2023 (A3)</p>
+			<div id="content">
+			<p class="text-primary fw-bold">1. Write a C program to find the reverse of a given number.</p>
+			<p class="text-primary fw-bold">2. Write a menu driven C program to find out<br>
+				a) whether a given number is Armstrong or not. A number whose sum of the cubes of the individual digits is the number itself is an Armstrong Number. E.g., 153 = 1<sup>3</sup> + 5<sup>3</sup> + 3<sup>3</sup></p>
+				<p class="text-primary fw-bold">b) all Armstrong numbers between a given range [a, b] where a and b are given by the user.</p>
+				<p><b><u>Sample Output</u></b></p>
+					<code>Press 1 to enter a number<br>Press 2 to enter a range<br>Press 3 to quit<br>1<br>Enter a number: 153<br>153 is an Armstrong Number<br>
+						Press 1 to enter a number<br>Press 2 to enter a range<br>Press 3 to quit<br>1<br>Enter a number: 143<br>143 is not an Armstrong Number<br>
+						Press 1 to enter a number<br>Press 2 to enter a range<br>Press 3 to quit<br>2<br>Enter two numbers: 1 1000<br>Armstrong numbers between 1 and 1000 are: 1, 153, 370, 371, 407<br>
+						Press 1 to enter a number<br>Press 2 to enter a range<br>Press 3 to quit<br>3<br></code>
+			<p class="text-primary fw-bold">3. Write a C program which prints all prime numbers between `a` and `b`. The values of `a` and `b` is given by user. The program should stop when user enters choice - 0</p>
+			<p><b><u>Sample Output</u></b></p>
+				<code>Enter two numbers (first number should be less than the second number): 1 20<br>
+				Prime numbers between 1 and 20 are 2 3 5 7 11 13 17 19<br>
+				Press 0 to quit or any other number to continue: 1<br>
+				Enter two numbers (first number should be less than the second number): 21 40<br>
+				Prime numbers between 21 and 40 are 23 29 31 37<br>
+				Press 0 to quit or any other number to continue: 0<br></code>
+            <p class="text-primary fw-bold">4. Write a C program to print the first ‘n’ numbers of the Fibonacci sequence.</p>
+			<p class="text-black"><i>Fibonacci sequence is constructed by adding the last two numbers of the sequence so
+				far to get the next number in the sequence. The first and second numbers of the sequence
+				are defined as 0 and 1. We get: 0, 1, 1, 2, 3, 5, 8, 13, 21</i></p>
+            <p class="text-primary fw-bold">5. Write a menu driven C program to find the binary, octal and hexadecimal equivalent of the entered integer. The user should keep entering numbers and choose one of the three options until an exit condition is entered by the user.</p>
+			<p class="text-black"><u><b>Example (Here exit condition is if user enters -1)</b></u></p>
+			<code>
+				Enter a number:  99<br>
+				Enter 1 to display binary equivalent<br>
+				Enter 2 to display octal equivalent<br>
+				Enter 3 to display hexadecimal equivalent<br>
+				2<br>
+				Octal equivalent of 99 is 143<br>
+				<br>
+				Enter a number:  6765<br>
+				Enter 1 to display binary equivalent<br>
+				Enter 2 to display octal equivalent<br>
+				Enter 3 to display hexadecimal equivalent<br>
+				3<br>
+				Octal equivalent of 6765 is 1A6D<br>
+				Enter a number:  -1<br>
+			</code>
+            <p class="text-primary fw-bold">6. Write a C program which prints the first 10 happy numbers. If you iterate the process (assume maximum 100 iterations) of summing the squares of the decimal digits of a number and if the process terminates in 1, then the original number is called a Happy number. For example 7 is a happy number as 7 → 49 → 97 → 130 → 10 → 1. [Optional]</p>
+            <p class="text-primary fw-bold">7. Write a C program that prints the following patterns for the input of n=4. The value of n is input by the user.
+            </p>
+			<p><pre>
+i)	1
+	1 2
+	1 2 3
+	1 2 3 4
+
+ii)		  1
+		1 2 1
+	      1 2 3 2 1
+	    1 2 3 4 3 2 1
+
+iii)	4 3 2 1 0
+	3 2 1
+	2
+
+iv)		  +
+		+ + +
+	      + + + + +
+	    + + + + + + +
+	      + + + + +
+		+ + +
+		  +
+
+
+			</pre></p>
+			<p class="text-primary fw-bold">8. Write a C program that prints the following patterns for the input of n=4. The value of n is input by the user. [OPTIONAL]
+            </p>
+			<p>
+				<pre>
+i)      1
+      1 2
+    1 2 3
+  1 2 3 4
+
+ii)
+        1
+       1 1
+      1 2 1
+     1 2 2 1
+    1 2 3 2 1
+   1 2 3 3 2 1
+  1 2 3 4 3 2 1
+
+iii)
+
++++++++++
+++++ ++++
++++   +++
+++     ++
++       +
+++     ++
++++   +++
+++++ ++++
++++++++++
+
+iv)
+    +    
+   + +
+  +   +
+ +     +
+  +   +
+   + +
+    +
+				</pre>
+			</p>
+		   </div>
           </div>
     </BODY>
