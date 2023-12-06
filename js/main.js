@@ -1,4 +1,4 @@
-var dates = ["2023-11-09","2023-11-16", "2023-11-29"]
+var dates = ["2023-11-09","2023-11-16", "2023-11-29", "2023-12-06", "2023-12-13"]
 
 function isFutureDate(dateString){
     var currentDate = new Date();
@@ -13,6 +13,7 @@ function displayOnDate(){
     var listItems = document.getElementsByClassName("nav-link")
     // console.log(listItems);
     for(i in dates){
+        console.log(i)
         if (isFutureDate(dates[i])){
             // Disable ith day link
             link = listItems[i];
@@ -117,3 +118,10 @@ function compiler(c_code,divContent){
   xhr.send(data);
 }
 
+function processQuestion(){
+  // var data = document.getElementById('question').value;
+  // Get the HTML contents of the currently active editor
+  var data = tinyMCE.activeEditor.getContent();
+  const element = document.getElementById("content");
+  element.innerHTML += data
+}
