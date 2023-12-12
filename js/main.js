@@ -17,7 +17,7 @@ function displayOnDate(){
         if (isFutureDate(dates[i])){
             // Disable ith day link
             link = listItems[i];
-            console.log(link);
+            console.log("Disabling: " + link);
             link.onclick = function(event) {
                 event.preventDefault();
             }
