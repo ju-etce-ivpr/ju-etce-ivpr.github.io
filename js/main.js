@@ -28,7 +28,7 @@ function displayOnDate(){
 
 function displayInputFile(){
 
-  const paragraphs = document.querySelectorAll('#content p');
+  const paragraphs = document.querySelectorAll('#content p.text-primary');
   var i =1;
   paragraphs.forEach(para => {
     // Adding file input
