@@ -6,6 +6,9 @@
 		<META name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+		  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+		  </script>
 		<script src="js/main.js"></script>
 	</HEAD>
 	<BODY onload="displayOnDate()">
@@ -40,113 +43,130 @@
             <p class="display-1 text-center">Loops</p>
             <p class="h2 text-lg-end">Date: 29-11-2023 (A2) , 30-11-2023 (A3)</p>
 			<div id="content">
-			<p class="text-primary fw-bold">1. Write a C program to find the reverse of a given number.</p>
-			<p class="text-primary fw-bold">2. Write a menu driven C program to find out<br>
-				a) whether a given number is Armstrong or not. A number whose sum of the cubes of the individual digits is the number itself is an Armstrong Number. E.g., 153 = 1<sup>3</sup> + 5<sup>3</sup> + 3<sup>3</sup></p>
-				<p class="text-primary fw-bold">b) all Armstrong numbers between a given range [a, b] where a and b are given by the user.</p>
-				<p><b><u>Sample Output</u></b></p>
-					<code>Press 1 to enter a number<br>Press 2 to enter a range<br>Press 3 to quit<br>1<br>Enter a number: 153<br>153 is an Armstrong Number<br>
-						Press 1 to enter a number<br>Press 2 to enter a range<br>Press 3 to quit<br>1<br>Enter a number: 143<br>143 is not an Armstrong Number<br>
-						Press 1 to enter a number<br>Press 2 to enter a range<br>Press 3 to quit<br>2<br>Enter two numbers: 1 1000<br>Armstrong numbers between 1 and 1000 are: 1, 153, 370, 371, 407<br>
-						Press 1 to enter a number<br>Press 2 to enter a range<br>Press 3 to quit<br>3<br></code>
-			<p class="text-primary fw-bold">3. Write a C program which prints all prime numbers between `a` and `b`. The values of `a` and `b` is given by user. The program should stop when user enters choice - 0</p>
-			<p><b><u>Sample Output</u></b></p>
-				<code>Enter two numbers (first number should be less than the second number): 1 20<br>
-				Prime numbers between 1 and 20 are 2 3 5 7 11 13 17 19<br>
-				Press 0 to quit or any other number to continue: 1<br>
-				Enter two numbers (first number should be less than the second number): 21 40<br>
-				Prime numbers between 21 and 40 are 23 29 31 37<br>
-				Press 0 to quit or any other number to continue: 0<br></code>
-            <p class="text-primary fw-bold">4. Write a C program to print the first ‘n’ numbers of the Fibonacci sequence.</p>
-			<p class="text-black"><i>Fibonacci sequence is constructed by adding the last two numbers of the sequence so
-				far to get the next number in the sequence. The first and second numbers of the sequence
-				are defined as 0 and 1. We get: 0, 1, 1, 2, 3, 5, 8, 13, 21</i></p>
-            <p class="text-primary fw-bold">5. Write a menu driven C program to find the binary, octal and hexadecimal equivalent of the entered integer. The user should keep entering numbers and choose one of the three options until an exit condition is entered by the user.</p>
-			<p class="text-black"><u><b>Example (Here exit condition is if user enters -1)</b></u></p>
-			<code>
-				Enter a number:  99<br>
-				Enter 1 to display binary equivalent<br>
-				Enter 2 to display octal equivalent<br>
-				Enter 3 to display hexadecimal equivalent<br>
-				2<br>
-				Octal equivalent of 99 is 143<br>
-				<br>
-				Enter a number:  6765<br>
-				Enter 1 to display binary equivalent<br>
-				Enter 2 to display octal equivalent<br>
-				Enter 3 to display hexadecimal equivalent<br>
-				3<br>
-				Octal equivalent of 6765 is 1A6D<br>
-				Enter a number:  -1<br>
-			</code>
-            <p class="text-primary fw-bold">6. Write a C program which prints the first 10 happy numbers. If you iterate the process (assume maximum 100 iterations) of summing the squares of the decimal digits of a number and if the process terminates in 1, then the original number is called a Happy number. For example 7 is a happy number as 7 → 49 → 97 → 130 → 10 → 1. [Optional]</p>
-            <p class="text-primary fw-bold">7. Write a C program that prints the following patterns for the input of n=4. The value of n is input by the user.
-            </p>
-			<p><pre>
-i)	1
-	1 2
-	1 2 3
-	1 2 3 4
-
-ii)		  1
-		1 2 1
-	      1 2 3 2 1
-	    1 2 3 4 3 2 1
-
-iii)	4 3 2 1 0
-	3 2 1
-	2
-
-iv)		  +
-		+ + +
-	      + + + + +
-	    + + + + + + +
-	      + + + + +
-		+ + +
-		  +
-
-
-			</pre></p>
-			<p class="text-primary fw-bold">8. Write a C program that prints the following patterns for the input of n=4. The value of n is input by the user. [OPTIONAL]
-            </p>
-			<p>
-				<pre>
-i)      1
-      1 2
-    1 2 3
-  1 2 3 4
-
-ii)
-        1
-       1 1
-      1 2 1
-     1 2 2 1
-    1 2 3 2 1
-   1 2 3 3 2 1
-  1 2 3 4 3 2 1
-
-iii)
-
-+++++++++
-++++ ++++
-+++   +++
-++     ++
-+       +
-++     ++
-+++   +++
-++++ ++++
-+++++++++
-
-iv)
-    +    
-   + +
-  +   +
- +     +
-  +   +
-   + +
-    +
-				</pre>
+			<p class="text-primary fw-bold">1. Write a program which takes some numbers, stores them in an array and computes the standard deviation of them using functions.
+			<span><i>The function takes in the array as function argument and returns the standard deviation</i></span><br>
+			The formula of standard deviation is given below-<br>
+			\(s = \sqrt{\sum (x - \mu)^2 \over n-1} \)<br>
+			where \( \mu \) is the mean and \( n \) is the total number of elements.
+			<br><b><u>Sample Output</u></b><br>
+				<code>
+					Enter 10 numbers:<br>
+					10<br>
+					12<br>
+					23<br>
+					23<br>
+					16<br>
+					23<br>
+					21<br>
+					16<br>
+					14<br>
+					11<br>
+					Standard Deviation: 5.2164270445499<br>
+				</code>
 			</p>
+			<p class="text-primary fw-bold">2. Write a C program to find the biggest number in an array using an user defined recursive function.<br>
+				<span><b>Sample Output</b></span><br>
+				<code>
+					Enter 10 numbers:<br>
+					10<br>
+					12<br>
+					23<br>
+					25<br>
+					16<br>
+					-8<br>
+					21<br>
+					0<br>
+					14<br>
+					11<br>
+					Biggest Number: 25
+				</code>
+			</p>
+			<p class="text-primary fw-bold">3. Write a program for accepting values in two square matrices of 3x3 dimension and generate their sum, difference and product of both the matrices. Create three different user defined functions for each of the operations.<br>
+				<span><b><u>Sample Output</u></b></span><br>
+				<code>
+					Enter values for matrix 1:<br>
+					1	2 	3<br>
+					4	7 	8<br>
+					2 	4 	1<br>
+					<br>
+					Enter values for matrix 2:<br>
+					5 	5 	8<br>
+					2 	6 	9<br>
+					3 	1 	2<br>
+					<br>
+					Sum:
+					<br>
+					6	 7	11<br>
+					6	13	17<br>
+					5	 5	 3<br>
+					<br>
+					Difference:
+					<br>
+					-4	-3	-5<br>
+					2	 1	-1<br>
+					-1	 3	-1<br>
+					<br>
+					Product:
+					<br>
+					18	20	 32<br>
+					58	70	111<br>
+					21	35	 54<br>
+				</code>
+			</p>
+			<p class="text-primary fw-bold">4. Write a C program which accepts a string from user and<br>
+				i) Counts the number of characters in the string using a string library function.			[Compulsory]<br>
+				ii) Counts the total number of words in the given string.		[Compulsory]<br>
+				iii) Prints the reverse of the string, then compares with the original string using a string library function to find out whether the string is palindrome or not.					[Compulsory]<br>
+				iv) Finds the most frequent character in a string.			[OPTIONAL]<br>
+				<span><b><u>Sample Output</u></b></span><br>
+				<code>
+					Enter string:<br>
+					Jadavpur University<br>
+					Characters: 19<br>
+					Words: 2<br>
+					Reversed: ytisrevinU rupvadaJ<br>
+					Palindrome? No<br>
+					Most frequent character: a,i,r,u,v<br>
+				</code>
+			</p>
+            <p class="text-primary fw-bold">5. Write a C Program to enter a string and find the histogram of alphabets for that string. Histogram means the number of occurrences of each alphabet in the string.<br>
+				<span><b><u>Sample Output</u></b></span><br>
+				<code>
+					Enter string: Mississippi<br>
+					i: 4<br>
+					m: 1<br>
+					p: 2<br>
+					s: 4<br>
+				</code>
+			</p>
+            <p class="text-primary fw-bold">6. Write a menu driven C program that converts a string like “123” to integer 123 and vice-versa. Use two separate user defined functions that return appropriate results.<br>
+			<span><u><b>Sample Output (Here exit condition is if user enters -1)</b></u></span><br>
+			<code>
+				Press 1 to convert string to integer<br>
+				Press 2 to convert integer to string<br>
+				Press 0 to quit<br>
+				1<br>
+				1234<br>
+				Number: 1234<br>
+				Press 1 to convert string to integer<br>
+				Press 2 to convert integer to string<br>
+				Press 0 to quit<br>
+				2<br>
+				560<br>
+				String: 560<br>
+				Press 1 to convert string to integer<br>
+				Press 2 to convert integer to string<br>
+				Press 0 to quit<br>
+				0<br>
+			</code>
+            <p class="text-primary fw-bold">7. Write a function squeeze(s,c) which removes all occurrences of the character c from the string s. There should be no blank space in place of the removed character. [OPTIONAL]<br>
+				<span><u><b>Sample output</b></u></span><br>
+				<code>
+					Enter string: hello students, welcome to computer science.<br>
+					Enter character: o<br>
+					Output: hell students, welcme t cmputer science<br>
+				</code>
+            </p>
 		   </div>
           </div>
     </BODY>
